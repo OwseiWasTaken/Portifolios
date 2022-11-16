@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="racismo.css">
+    <title>Racismo na Internet</title>
+    <style>
+        body {
+            background-color: #212121;
+        }
+
+        nav {
+            background-color: #0d0d0d;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        div {
+            margin: 0 30px 0 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        div > p {
+            color: #afaeae;
+            font-size: 20px;
+            padding: 10px;
+        }
+        div:hover aside {
+            opacity: 1;
+            visibility: visible;
+            translate: 0 0;
+        }
+
+        aside {
+            border-radius: 10px;
+            position: absolute;
+            top: 40px;
+            width: 130px;
+            padding: 0 10px;
+            place-items: start;
+            background-color: #19191c;
+            opacity: 0;
+            visibility: hidden;
+            translate: 0 15px;
+            transition: 0.3s;
+        }
+        aside > p {
+            font-size: 16px;
+            color: #afaeae;
+            margin: 10px 0;
+            border-bottom: outset #afaeae;
+        }
+        aside > p:hover {
+            color: white;
+            border-bottom-color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <p>notícias</p>
+            <aside>
+                <p>futebol</p>
+                <p>política</p>
+                <p>finanças</p>
+            </aside>
+        </div>
+        <div>
+            <p>vagas</p>
+            <aside>
+                <p>analista de sistemas</p>
+                <p>engenheiro de software</p>
+                <p>programador</p>
+            </aside>
+        </div>
+        <div>
+            <p>repertório</p>
+            <aside>
+                <p>livros</p>
+                <p>faculdades</p>
+                <p>conhecimentos</p>
+            </aside>
+        </div>
+    </nav>
+</body>
+</html>
