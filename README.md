@@ -1,2 +1,2 @@
 # Portifolios
- Portifólios criados para treino
+ Portifólios para treinar HTML e CSS, criados para usar de base em projetos ou guardar conceitos
