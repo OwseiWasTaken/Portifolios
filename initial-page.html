@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>página inicial</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #396567;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #5f9ea0;
+        }
+        nav div {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        nav section {
+            background-color: #b2b2b2;
+            border-radius: 10px;
+            position: absolute;
+            top: 40px;
+            left: 25px;
+            opacity: 0;
+            visibility: hidden;
+            translate: 0 10px;
+            transition: 0.3s;
+            place-items: start;
+            width: 150px;
+            box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.163);
+        }
+        div:hover section {
+            opacity: 1;
+            visibility: visible;
+            translate: 0 0;
+        }
+        div h2 {
+            color: #274547;
+            padding: 5px;
+            margin: 10px 20px;
+        }
+        div p {
+            color: #868686;
+            border-bottom: solid 1px;
+            margin: 15px;
+        }
+        div p:hover {
+            color: #d0d0d0;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <h2>Esportes</h2>
+            <section>
+                <p>Futebol</p>
+                <p>Basquete</p>
+                <p>Fórmula 1</p>
+                <p>Boxe</p>
+            </section>
+        </div>
+        <div>
+            <h2>Entretenimento</h2>
+            <section>
+                <p>Filmes</p>
+                <p>Séries</p>
+                <p>Livros</p>
+                <p>Animes</p>
+            </section>
+        </div>
+        <div>
+            <h2>Área de trabalho</h2>
+            <section>
+                <p>Engenharia de software</p>
+                <p>Análise de software</p>
+                <p>Ciência da computação</p>
+                <p>Inteligência artificial</p>
+            </section>
+        </div>
+    </nav>
+</body>
+</html>
