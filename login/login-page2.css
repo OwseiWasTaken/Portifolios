@@ -1,0 +1,177 @@
+* {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fefae0;
+    }
+    
+
+    #container {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        height: 80vh;
+        max-height: 500px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px black;
+    }
+    
+
+    #image-size {
+        width: calc(50% + (2*20px));
+        height: 100%;
+        background-color: #ccd5ae;
+    }
+
+
+    #login-size {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        padding: 0 20px;
+        background-color: white;
+    }
+
+    form {
+        overflow: auto;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 4vh 0;
+    }
+    header> h1::after {
+        content: " ";
+        margin: 10px;
+        width: 30px;
+        border: solid 2px #daa066;
+    }
+    header > input {
+        border: none;
+        height: fit-content;
+        padding: .5vh 1vw;
+        margin: 5px;
+        border-radius: 5px;
+        background-color: #e9edc9;
+        border: solid 1px;
+    }
+    header > input:hover {
+        color: white;
+        background-color: #cedca1;
+        transform: scale(1.01);
+        border: none;
+    }
+
+    #dissertative-box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .dissertative {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    .dissertative > input {
+        padding: 2px;
+    }
+     .dissertative > input:focus {
+        background-color: #f7e7bf;
+        border: solid 1px;
+     }
+
+    #alternative-box {
+        display: flex;
+        flex-direction: column;
+        margin: 3vh 0;
+    }
+    #alternative-box > p {
+        margin: 5px;
+    }
+
+    #confirm {
+        text-align: center;
+    }
+    #cadastro-botao {
+        background-color: #fff07c;
+        font-weight: bolder;
+        text-align: center;
+        width: 70%;
+        padding: 1em 2em;
+        margin: 2vh 20px;
+        border: solid 1px;
+        border-radius: 5px;
+        border: none;
+    }
+    #cadastro-botao:hover {
+        background-color: #ffe4a1;
+    }
+
+
+
+    @media screen and (max-width: 576px) {
+        body {
+            font-size: 0.8em;
+        }
+        #container {
+            width: 60vw;
+        }
+
+        #image-size {
+            display: none;
+        }
+        #login-size {
+            width: 100%;
+        }
+        header {
+            margin: 10 px 5px;
+        }
+
+        .dissertative > input {
+            max-width: 90px;
+            margin: 1px;
+        }
+    }
+
+    @media screen and (min-width: 576px) and (max-width: 1000px) {
+        body {
+            font-size: 0.8em;
+        }
+
+        #container {
+            width: 70vw;
+            height: 70vh;
+        }
+        #image-size {
+            width: 30%;
+        }
+        #login-size {
+            width: 70%;
+            padding: 0 10px;
+        }
+
+        header {
+            margin: 20px;
+        }
+
+        .dissertative {
+            margin: 8px;
+        }
+        .dissertative > input {
+            max-width: 110px;
+        }
+    }
