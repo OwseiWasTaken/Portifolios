@@ -4,40 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar3.css">
     <title>Barra de navegação</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-        li {
-            display: inline;
-            letter-spacing: 3em;
-        }
-
-        main {
-            background-image: url(https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
 </head>
-<body>
-    <nav>
-        <h1>Título</h1>
-        <ul>
+<body id="body" onresize="sizeChange()">
+    <nav id="navbar">
+        <h1>Logo</h1>
+        <div onclick="Click()"><span></span></div>
+        <ul id="navegation">
             <li>Tema</li>
             <li>Tema</li>
             <li>Tema</li>
@@ -45,5 +19,26 @@
         </ul>
     </nav>
     <main></main>
+    <script>
+        const body = document.querySelector('#body')
+        const navbar = document.querySelector('#navbar')
+        const navegation = document.querySelector('#navegation')
+
+        function sizeChange() {
+            if (window.innerWidth > 570) {
+                navegation.style.visibility = 'visible'
+            } else {
+                navegation.style.visibility = 'hidden'
+            }
+        }
+
+        function Click() {
+            if (navegation.style.visibility == 'hidden') {
+                navegation.style.visibility = 'visible'
+            } else {
+                navegation.style.visibility = 'hidden'
+            }
+        }
+    </script>
 </body>
 </html>
