@@ -17,6 +17,7 @@ div {
   width: 100px;
   height: 100px;
   border-radius: 10px;
+  cursor: pointer;
 }
 div::before {
   position: absolute;
@@ -43,11 +44,12 @@ div::after {
 
 input:checked ~ label > div::before {
   top: 48%;
+  left: 22%;
   transform: rotate(225deg);
 }
 input:checked ~ label > div::after {
   top: 48%;
-  left: 20%;
+  left: 22%;
   width: 60%;
   transform: rotate(315deg);
 }
