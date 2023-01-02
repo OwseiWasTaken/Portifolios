@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #960093, #f400a1);
+  font-size: 0.9em;
+}
+
+div {
+  background-color: #ffffffbb;
+  width: 65vw;
+  max-width: 400px;
+  height: 50vh;
+  max-height: 500px;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 15px;
+}
+/*
+div::before {
+  content: " ";
+  position: absolute;
+  background-color: #ffffff77;
+  width: calc(65vw + 20px*2);
+  max-width: 400px;
+  height: calc(50vh + 30px*2);
+  border-radius: 5px;
+  border: solid 1px;
+  transform: 
+}
+*/
+
+i {
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+input {
+  width: 90%;
+  padding: 3px;
+  font-size: 1.1em;
+  border-radius: 3px;
+  border: solid 1px
+}
+input[type="email"] {
+  margin-bottom: 10px;
+}
+input[type="submit"] {
+  background-color: #323232;
+  color: white;
+  margin-bottom: 10px;
+  padding: 7px;
+  border-radius: 10px;
+  font-weight: bold
+}
+
+#forget {
+  margin: 5px;
+  padding: 5px;
+}
+#forget a {
+  float: right;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+#remem {
+  width: 15px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+}
+footer > i {
+  font-size: 30px;
+}
+
+.diminute {
+  font-size: 0.8em;
+}
+
+.margin {
+  margin-bottom: 30px;
+}
