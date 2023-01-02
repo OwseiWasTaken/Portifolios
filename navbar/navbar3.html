@@ -10,7 +10,7 @@
 <body id="body" onresize="sizeChange()">
     <nav id="navbar">
         <h1>Logo</h1>
-        <div onclick="Click()"><span></span></div>
+        <div onclick="Click()"><span id="hamburger"></span></div>
         <ul id="navegation">
             <li>Tema</li>
             <li>Tema</li>
@@ -33,10 +33,10 @@
         }
 
         function Click() {
-            if (navegation.style.visibility == 'hidden') {
-                navegation.style.visibility = 'visible'
-            } else {
+            if (navegation.style.visibility == 'visible') {
                 navegation.style.visibility = 'hidden'
+            } else {
+                navegation.style.visibility = 'visible'
             }
         }
     </script>
