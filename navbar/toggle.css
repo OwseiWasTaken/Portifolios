@@ -1,0 +1,81 @@
+body, #list {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #c6c6c6;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}
+header #button {
+    display: none;
+    border: hidden;
+    background-color: transparent;
+}
+#nav #list {
+    display: flex;
+    list-style-type: none;
+    transition: 0.5s;
+}
+#list li {
+    margin: 3px;
+    padding: 3px 6px;
+    cursor: pointer;
+}
+#list li:hover {
+    color: #353535;
+    background-color:#a0a0a0ba;
+    border-radius: 5px;
+}
+
+#hamburger {
+    box-sizing: border-box;
+    display: none;
+    border-top: 2px solid;
+    width: 20px;
+}
+#hamburger::before, #hamburger::after {
+    content: ' ';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: black;
+    margin-top: 3px;
+}
+
+
+@media screen and (max-width: 600px) {
+    header #button {
+    display: inline-block;
+    }
+    #hamburger {
+        display: inline-block;
+    }
+
+    #nav #list {
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+        padding: 20px 5px 0 5px;
+        background-color: #c6c6c6;
+        width: 100vw;
+        height: 100%;
+    }
+    #nav.active #list {
+        visibility: visible;
+        flex-direction: column;
+    }
+    #list li {
+        margin: 0;
+        margin-bottom: 10px;
+        border-bottom: solid 1px grey;
+    }
+}

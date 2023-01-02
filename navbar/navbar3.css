@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    overflow-x: hidden;
+}
 
 #navbar {
     height: 8vh;
@@ -16,12 +19,15 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+#check {
+    display: none;
+}
 #hamburger {
     position: relative;
-    border: solid;
     box-sizing: border-box;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 #hamburger::before {
     content: " ";
@@ -31,10 +37,9 @@ h1 {
 
     background-color: white;
     width: 80%;
-    height: 2.5px;
+    height: 2px;
     border-radius: 15px;
-    animation: girarBefore 0.5s ease;
-    animation-delay: 2s;
+    transition: 0.5s ease;
 }
 #hamburger::after {
     content: " ";
@@ -44,37 +49,21 @@ h1 {
 
     background-color: white;
     width: 40%;
-    height: 2.5px;
+    height: 2px;
     border-radius: 10px;
-    animation: girarAfter 0.5s ease;
-    animation-delay: 2s;
+    transition: 0.5s ease;
 }
-
-@keyframes girarBefore {
-    0% {
-        width: 80%;
-        height: 8%;
-        
-    }
-    100% {
-        top: 50%;
-        width: 80%;
-        right: 0;
-        transform: rotate(225deg);
-    }
+#check:checked ~ label #hamburger::before {
+    top: 50%;
+    width: 75%;
+    right: 0;
+    transform: rotate(225deg);
 }
-@keyframes girarAfter {
-    0% {
-        width: 40%;
-        height: 8%;
-        right: 15%;
-    }
-    100% {
-        top: 50%;
-        width: 80%;
-        right: 0;
-        transform: rotate(315deg);
-    }
+#check:checked ~ label #hamburger::after {
+    top: 50%;
+    width: 75%;
+    right: 0;
+    transform: rotate(315deg);
 }
 
 
@@ -111,6 +100,10 @@ main {
     }
 
     #navegation {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+
         background: linear-gradient(darkslategrey 20%, #253232 80%);
         display: flex;
         flex-direction: column;
@@ -120,10 +113,12 @@ main {
         padding: 10px 4vw;
         border-left: solid 1px;
         box-sizing: border-box;
-        position: absolute;
-        top: 8vh;
-        right: 0;
         visibility: hidden;
+        transform: translateX(100%);
+        transition: 0.5s ease;
+    }
+    #navegation.active {
+        transform: translateX(0%);
     }
     li {
         margin-top: 30px;

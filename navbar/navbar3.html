@@ -10,7 +10,12 @@
 <body id="body" onresize="sizeChange()">
     <nav id="navbar">
         <h1>Logo</h1>
-        <div onclick="Click()"><span id="hamburger"></span></div>
+        <form action="#">
+            <input type="checkbox" name="check" id="check">
+            <label for="check">
+                <div onclick="Click()"><span id="hamburger"></span></div>
+            </label>
+        </form>
         <ul id="navegation">
             <li>Tema</li>
             <li>Tema</li>
@@ -38,6 +43,7 @@
             } else {
                 navegation.style.visibility = 'visible'
             }
+            navegation.classList.toggle('active')
         }
     </script>
 </body>
