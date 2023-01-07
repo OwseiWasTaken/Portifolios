@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: relative;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+        }
+        h1 {
+            color: #2e2cb6;
+            margin: 4px;
+            font-size: 2em
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li {
+            display: inline-block;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 3px 6px;
+            margin: 4px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        ul li:last-child {
+            background-color: #546cc6;
+            padding: 4px 8px;
+            border-radius: 5px;
+            border-bottom: none;
+        }
+        ul li:last-child:hover {
+            border-bottom: none;
+            padding: 4px 8px;
+            background-color: #fa9897;
+            color: white;
+        }
+        ul li:hover{
+            border-bottom: solid 3px #fb8177;
+            padding: 0 6px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 45px 5% 5% 5%;
+        }
+        #main {
+            flex: 40%;
+            margin: 20px 0;
+        }
+        #main h2 {
+            font-size: 3em;
+            color: #e25653;
+            padding: 5px;
+        }
+        #main p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #main button {
+            background: linear-gradient(330deg, #8eacf9 10%, #546cc6);
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        #main a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #main-img {
+            flex: 60%;
+            margin: 20px 0;
+        }
+        #main-img img {
+            width: 100%;
+        }
+
+        section {
+            padding: 20px;
+            background-color: #eaf9ff;
+            text-align: center;
+        }
+        section h2 {
+            color: darkblue;
+            margin: 10px 0 40px 0;
+            font-size: 2em;
+        }
+        article {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        #card1, #card2, #card3 {
+            background-color: #ffe9e9;
+            width: 200px;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 15px;
+            border: solid 2px #fa9897;
+        }
+        article h3 {
+            color: rgb(14, 14, 14);
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Fake</h1>
+        <ul>
+            <li>Entenda</li>
+            <li>Notícias</li>
+            <li>Conhecimentos</li>
+            <li>Sobre</li>
+        </ul>
+    </nav>
+    <header>
+        <div id="main">
+            <h2>Conheça nossa empresa</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus mollitia adipisci natus eos? Dolor, provident id. Ab quam eum fugit officia, libero expedita et quos blanditiis, nostrum explicabo sed alias.</p>
+            <button><a href="#">Produtos</a></button>
+        </div>
+        <div id="main-img">
+            <img src="fake.jpg" alt="marketing">
+        </div>
+    </header>
+    <section>
+        <h2>Conheça nossos cursos</h2>
+        <article>
+            <div id="card1">
+                <h3>Desenvolvimento de software</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quasi magnam. Obcaecati molestias doloribus temporibus, voluptatem, dolorum accusamus cumque nesciunt non commodi recusandae quidem maxime illo incidunt accusantium aspernatur maiores!
+                </p>
+            </div>
+            <div id="card2">
+                <h3>Infraestrutura de dados</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quasi magnam. Obcaecati molestias doloribus temporibus, voluptatem, dolorum accusamus cumque nesciunt non commodi recusandae quidem maxime illo incidunt accusantium aspernatur maiores!
+                </p>
+            </div>
+            <div id="card3">
+                <h3>Análise de sistemas</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quasi magnam. Obcaecati molestias doloribus temporibus, voluptatem, dolorum accusamus cumque nesciunt non commodi recusandae quidem maxime illo incidunt accusantium aspernatur maiores!
+                </p>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
