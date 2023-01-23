@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Flexbox</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			header {
+				background-color: #1f2937;
+			}
+			
+			nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 10px 15vw;
+			}
+			nav p {
+				color: #f9faf8;
+				font-weight: bolder;
+				font-size: 1.5em;
+			}
+			nav ul {
+				display: flex;
+				gap: 0.6em;
+				list-style-type: none;
+			}
+			nav ul li {
+				color: #e5e7eb;
+				font-size: 0.9em;
+			}
+			
+			header section {
+				display: flex;
+				justify-content: space-between;
+				gap: 1em;
+				padding: 10vw 15vw;
+			}
+			section article {
+				flex: 1;
+			}
+			
+			#content {
+				flex: 40%;
+				color: #f9faf8;
+			}
+			#content h1 {
+				font-weight: bolder;
+				font-size: 2.5em;
+				margin: 5px 0;
+			}
+			#content p {
+				color: #e5e7eb;
+				margin: 5px 0;
+			}
+			#content button {
+				color: white;
+				background-color: #3882f6;
+				padding: 0.5em 2em;
+				border-radius: 0.4em;
+				border: none;
+			}
+			#image {
+				flex: 60%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				background-color: darkgrey;
+			}
+			
+			main {
+				text-align: center;
+				margin-bottom: 10vw;
+			}
+			main h2 {
+				color: #1f2937;
+				font-weight: bolder;
+				font-size: 2em;
+				margin: 1em;
+			}
+			main section {
+				display: flex;
+				justify-content: space-evenly;
+				margin: 0 15vw;
+			}
+			main aside {
+				display: flex;
+				flex-direction: column;
+				width: 120px;
+			}
+			.box {
+				border: solid 2px #3882f6;
+				width: 120px;
+				height: 120px;
+				border-radius: 1em;
+			}
+			
+			#quote {
+				display: flex;
+				justify-content: center;
+				background-color: #e5e7eb;
+				padding: 8vw 20vw;
+			}
+			#quote p {
+				color: #1f2937;
+				font-weight: 300;
+				font-size: 2em;
+				font-style: italic;
+			}
+			#quote h3 {
+				text-align: end;
+			}
+			
+			#banner {
+				padding: 8vw 15vw;
+			}
+			#banner article {
+				display: flex;
+				justify-content: space-around;
+				color: #f9faf8;
+				background-color: #3882f6;
+				padding: 2em;
+				border-radius: 0.5em;
+			}
+			#banner button {
+				color: #f9faf8;
+				background-color: transparent;
+				padding: 0.5em 2em;
+				border-radius: 0.4em;
+				border: solid 1px white;
+			}
+			
+			footer {
+				color: #f9faf8;
+				background-color: #1f2937;
+				text-align: center;
+				padding: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+	  	<nav>
+		  	<p>Header Logo</p>
+		  	<ul>
+			  	<li>header link one</li>
+			  	<li>header link two</li>
+			  	<li>header link three</li>
+		  	</ul>
+	  	</nav>
+	  	<section>
+	  		<article id="content">
+			  	<h1>This website is awesome</h1>
+		  		<p>this webssite has some undertext that goes here under the main title. It's a smaller font and the color is lower contrast.</p>
+			  	<button>Log in</button>
+		  	</article>
+		  	<article id="image">
+		  		<p>This is a placeholder for a image</p>
+	  		</article>
+	  	</section>
+	  </header>
+	  <main>
+	  	<h2>Some random information</h2>
+	  	<section>
+	    	<aside>
+	    		<div class="box"></div>
+	    		<p>this is some subtext under an image or illustration</p>
+	    	</aside>
+	    	<aside>
+	    		<div class="box"></div>
+	    		<p>this is some subtext under an image or illustration</p>
+	    	</aside>
+	    	<aside>
+	    		<div class="box"></div>
+	    		<p>this is some subtext under an image or illustration</p>
+	    	</aside>
+	    	<aside>
+	    		<div class="box"></div>
+	    		<p>this is some subtext under an image or illustration</p>
+	    	</aside>
+	    </section>
+	  </main>
+	  <section id="quote">
+	  	<div>
+	  		<p>jskzbjsjzkakm zkskskjejxkksk xjjdjcjjdjskk mnnxjsjsj jxhejjx jejxnxnexjbdxnj skdmnxje jjxjxnenxk kekskxkks jznjwjsjkwk eijxjxnsmkdk wkskkzkdwks kkxekks kkdk ekxjxnnsjxk</p>
+	  		<h3>-Carrara, Agostinho</h3>
+	  	</div>
+	  </section>
+	  <section id="banner">
+	  	<article>
+	  		<div>
+	  			<h3>Call to action! It's time!</h3>
+	  			<p>Sign up to our product by clicking that button right over there!</p>
+	  		</div>
+	  		<button>Sign ip</button>
+	  	</article>
+	  </section>
+	  <footer>
+	  	<p>Copyright © TheOdinProject</p>
+	  </footer>
+	</body>
+</html>
