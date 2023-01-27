@@ -120,23 +120,48 @@
             justify-content: space-evenly;
             flex-wrap: wrap;
         }
-        .card h3 {
-            font-size: 1em;
-        }
-        .card p {
-            font-size: 0.8em;
-        }
-        #card1, #card2, #card3 {
-            background-color: #ffe9e9;
-            width: 200px;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 15px;
-            border: solid 2px #fa9897;
-        }
         article h3 {
             color: rgb(14, 14, 14);
-            margin: 5px 0;
+            margin: 0.5em 0;
+        }
+        
+        .card {
+        	background-color: transparent;
+        	width: 200px;
+        	height: 250px;
+        	perspective: 100%;
+        }
+        .flip {
+        	position: relative;
+        	text-align: center;
+        	width: 100%;
+        	height: 100%;
+        	transform-style: preserve-3d;
+        	transition: 0.7s ease;
+        }
+        .flip:hover {
+        	transform: rotateY(180deg);
+        }
+        .front, .back {
+        	display: flex;
+        	flex-direction: column;
+        	justify-content: space-evenly;
+        	position: absolute;
+        	width: 100%;
+        	height: 100%;
+        	backface-visibility: hidden;
+        	border-radius: 1em;
+        	box-shadow: 1px 2px 5px 0 #00000030;
+        }
+        .front {
+        	background: linear-gradient(140deg, #fecdcb 30%, #fc9fbc);
+        	border: solid pink;
+        }
+        .back {
+        	transform: rotateY(180deg);
+        	background: linear-gradient(140deg, #261865 30%, #4234b8);
+        	color: #dedede;
+        	border: solid 1px darkblue;
         }
 
         footer {
@@ -144,7 +169,7 @@
             justify-content: center;
             align-items: center;
             background-color: midnightblue;
-            height: 30vh;
+            height: min(25vh, 125px);
             border-top: solid 5px #ad1730;
         }
         footer h1 {
@@ -245,21 +270,19 @@
             }
             #main-img {
                 flex: 100%;
-                margin: 0 50px;
+                margin: 0.2em 1.5em;
             }
 
             article {
                 flex-direction: column;
                 align-content: center;
-            }
-            #card1, #card2, #card3 {
-                margin: 25px;
+                gap: 2em;
             }
         }
 
         @media screen and (max-width: 700px) {
             * {
-                font-size: 12px;
+                font-size: 13px;
             }
 
             #main button {
@@ -297,20 +320,41 @@
     <section>
         <h2>Conheça nossos cursos</h2>
         <article>
-            <div id="card1" class="card" data-aos="zoom-in" data-aos-delay="100"> <!--  data-aos="flip-left"  -->
-                <h3>Desenvolvimento de software</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quasi magnam. Obcaecati molestias doloribus temporibus, voluptatem, dolorum accusamus cumque nesciunt non commodi recusandae quidem maxime illo incidunt accusantium aspernatur maiores!
-                </p>
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="flip">
+                	  <div class="front">
+                	  	  <h4>Análise de sistemas</h4>
+                	  	  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus mollitia adipisci natus eos? Dolor, provident id. Ab quam eum fugit officia, libero expedita et quos blanditiis, nostrum explicabo sed alias</p>
+                	  </div>
+                	  <div class="back">
+                	  	  <h4>Análise</h4>
+                	  	  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus mollitia adipisci natus eos? Dolor, provident id. Ab quam eum fugit officia, libero expedita et quos blanditiis, nostrum explicabo sed alias</p>
+                	  </div>
+                </div>
             </div>
-            <div id="card2" class="card" data-aos="zoom-in" data-aos-delay="100"> <!--  data-aos="flip-left"  -->
-                <h3>Infraestrutura de dados</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quasi magnam. Obcaecati molestias doloribus temporibus, voluptatem, dolorum accusamus cumque nesciunt non commodi recusandae quidem maxime illo incidunt accusantium aspernatur maiores!
-                </p>
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="flip">
+                	  <div class="front">
+                	  	  <h4>Análise de sistemas</h4>
+                	  	  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus mollitia adipisci natus eos? Dolor, provident id. Ab quam eum fugit officia, libero expedita et quos blanditiis, nostrum explicabo sed alias</p>
+                	  </div>
+                	  <div class="back">
+                	  	  <h4>Análise</h4>
+                	  	  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus mollitia adipisci natus eos? Dolor, provident id. Ab quam eum fugit officia, libero expedita et quos blanditiis, nostrum explicabo sed alias</p>
+                	  </div>
+                </div>
             </div>
-            <div id="card3" class="card" data-aos="zoom-in" data-aos-delay="100"> <!--  data-aos="flip-left"  -->
-                <h3>Análise de sistemas</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quasi magnam. Obcaecati molestias doloribus temporibus, voluptatem, dolorum accusamus cumque nesciunt non commodi recusandae quidem maxime illo incidunt accusantium aspernatur maiores!
-                </p>
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="flip">
+                	  <div class="front">
+                	  	  <h4>Análise de sistemas</h4>
+                	  	  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus mollitia adipisci natus eos? Dolor, provident id. Ab quam eum fugit officia, libero expedita et quos blanditiis, nostrum explicabo sed alias</p>
+                	  </div>
+                	  <div class="back">
+                	  	  <h4>Análise</h4>
+                	  	  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus mollitia adipisci natus eos? Dolor, provident id. Ab quam eum fugit officia, libero expedita et quos blanditiis, nostrum explicabo sed alias</p>
+                	  </div>
+                </div>
             </div>
         </article>
     </section>
