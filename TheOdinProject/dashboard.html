@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin dashboard</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Passion+One&family=Sriracha&display=swap');
+
+        * {
+            font-family: 'Kanit', sans-serif;;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        #sides {
+            display: flex;
+            height: 100%;
+        }
+
+        #left {
+            flex: 1;
+            color: white;
+            background-color: #3353d1;
+            padding: 0.5rem;
+        }
+        #left > h1 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        #left li {
+            font-size: 0.9rem;
+            margin: 0.2rem 0;
+            cursor: pointer;
+        }
+        #left .page {
+            margin-bottom: 1.2rem;
+        }
+        .page, .info {
+            list-style-type: none;
+        }
+
+
+
+        #right {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+        }
+        #top-right {
+            display: flex;
+            justify-content: stretch;
+            flex-wrap: wrap;
+            padding: 0.5em 1.5em;
+            height: 4rem;
+            box-shadow: 0 3px 5px #00000034;
+            z-index: 1;
+        }
+        .first {
+            flex: 70%;
+        }
+        .first input {
+            color: white;
+            background-color: #bfbfbf;
+            padding: 0 0.7rem;
+            width: 80%;
+            max-width: 25rem;
+            border-radius: 2rem;
+            border: none;
+        }
+
+        .second {
+            flex: 30%;
+            text-align: end;
+        }
+        .third, .fourth {
+            flex: 50%;
+            align-self: end;
+        }
+        .fourth {
+            text-align: end;
+        }
+        .fourth button{
+            color: white;
+            background-color: #3858d8;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 0.2rem 0;
+            margin-left: 0.5rem;
+            width: 3.2rem;
+            border-radius: 0.6rem;
+            border: none;
+        }
+
+
+
+        #bottom-right {
+            display: flex;
+            background-color: #c4c4c4;
+            height: 100%;
+        }
+        #bottom-right article {
+            flex: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0.7rem;
+        }
+        .post {
+            display: inline-block;
+            background-color: white;
+            padding: 0.3rem;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            width: 15rem;
+            border-radius: 0.3rem;
+            border-left: orange solid 5px;
+            box-shadow: 1px 1px 5px #00000029;
+            overflow: hidden;
+        }
+        .post h3 {
+            font-size: 12px;
+            padding-top: 5px;
+        }
+        .post p {
+            font-size: 11px;
+            padding-bottom: 2rem;
+        }
+
+
+        #bottom-right aside {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .aside-top {
+            flex: 60%;
+            border: solid;
+        }
+        .aside-bottom {
+            flex: 40%;
+            border: solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="sides">
+        <header id="left">
+            <h1>Dashboard</h1>
+            <ul class="page">
+                <li>Home</li>
+                <li>Profile</li>
+                <li>Message</li>
+                <li>History</li>
+                <li>Tools</li>
+                <li>Communities</li>
+            </ul>
+            <ul class="info">
+                <li>Settings</li>
+                <li>Support</li>
+                <li>Privacy</li>
+            </ul>
+        </header>
+        <div id="right">
+            <nav id="top-right">
+                <div class="first">
+                    <label for="search">lupa</label>
+                <input type="text" name="search" id="search">
+                </div>
+                <div class="second">
+                    <p>zenzx</p>
+                </div>
+                <div class="third">
+                    <p>zenzx (@enzola)</p>
+                </div>
+                <div class="fourth">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
+            </nav>
+            <section id="bottom-right">
+                <article>
+                    <div class="articles">
+                        <p>Projects</p>
+                        <div class="post">
+                            <h3>minecraft</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus voluptatibus eligendi doloremque aut similique aliquid voluptatem culpa accusamus. Minus facere nulla iusto, debitis doloremque reiciendis autem aperiam distinctio laboriosam.</p>
+                        </div>
+                        <div class="post">
+                            <h3>minecraft</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quod cumque, accusamus neque repellendus perferendis facere maiores corrupti, minus mollitia impedit vero modi doloremque. Magni nemo hic accusantium libero aperiam.</p>
+                        </div>
+                        <div class="post">
+                            <h3>minecraft</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quod cumque, accusamus neque repellendus perferendis facere maiores corrupti, minus mollitia impedit vero modi doloremque. Magni nemo hic accusantium libero aperiam.</p>
+                        </div>
+                        <div class="post">
+                            <h3>minecraft</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quod cumque, accusamus neque repellendus perferendis facere maiores corrupti, minus mollitia impedit vero modi doloremque. Magni nemo hic accusantium libero aperiam.</p>
+                        </div>
+                        <div class="post">
+                            <h3>minecraft</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quod cumque, accusamus neque repellendus perferendis facere maiores corrupti, minus mollitia impedit vero modi doloremque. Magni nemo hic accusantium libero aperiam.</p>
+                        </div>
+                        <div class="post">
+                            <h3>minecraft</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quod cumque, accusamus neque repellendus perferendis facere maiores corrupti, minus mollitia impedit vero modi doloremque. Magni nemo hic accusantium libero aperiam.</p>
+                        </div>
+                    </div>
+                </article>
+                <aside>
+                    <section class="aside-top">
+
+                    </section>
+                    <section class="aside-bottom">
+                        
+                    </section>
+                </aside>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
