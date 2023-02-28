@@ -1,3 +1,3 @@
 export default function myPrint() {
-    console.log("i'm from print.js")
+    console.log("i'm from print-two.js")
 }
