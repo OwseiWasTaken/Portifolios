@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,6 +6,7 @@
 		<title>Card</title>
 		<style>
 			.card {
+				display: inline-block;
 				background-color: transparent;
 				width: 12em;
 				height: 16em;
@@ -41,19 +43,44 @@
 				background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%, bisque 40%, rgb(255, 185, 160) 78%);
 			}
 		</style>
+<script>
+
+format = `\`
+<div class="card">
+	<div class="flip">
+		<div class="front">
+			<h2>\${nome}</h2>
+		</div>
+		<div class="back">
+			<h2>\${nome}</h2>
+			<p>\${desc}</p>
+		</div>
+	</div>
+</div>
+\``
+	
+cards = [
+	["Web Standards", "web"],
+	["API", "api"],
+	["Responsividade", "responsividade"],
+	["Bibliotecas", "libs"],
+	["Usabilidade", "usabilidade"],
+	["SEO", "seo"],
+	["CMS", "cms"],
+	["Acessibilidade", "acessibilidade"],
+]
+
+window.onload = () => {
+	for (thing of cards) {
+		let [nome, desc] = thing;
+		//console.log(eval(format))
+		document.body.innerHTML+=eval(format)
+	}
+}
+
+</script>
 	</head>
 	<body>
-		<div class="card">
-			<div class="flip">
-				<div class="front">
-					<h2>Arrasta</h2>
-					<p>vira card</p>
-				</div>
-				<div class="back">
-					<h2>sai de cima</h2>
-					<p>volta card</p>
-				</div>
-			</div>
-		</div>
 	</body>
 </html>
+
